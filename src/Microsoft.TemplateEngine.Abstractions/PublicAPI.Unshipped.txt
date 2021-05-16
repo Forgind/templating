@@ -24,6 +24,7 @@ Microsoft.TemplateEngine.Abstractions.ICacheTag.DefaultValue.get -> string?
 Microsoft.TemplateEngine.Abstractions.ICacheTag.Description.get -> string?
 Microsoft.TemplateEngine.Abstractions.ICacheTag.DisplayName.get -> string?
 Microsoft.TemplateEngine.Abstractions.IComponentManager
+Microsoft.TemplateEngine.Abstractions.IComponentManager.AddComponent(System.Type! interfaceType, Microsoft.TemplateEngine.Abstractions.IIdentifiedComponent! instance) -> void
 Microsoft.TemplateEngine.Abstractions.ICreationEffects
 Microsoft.TemplateEngine.Abstractions.ICreationEffects2
 Microsoft.TemplateEngine.Abstractions.ICreationPath
@@ -114,6 +115,7 @@ Microsoft.TemplateEngine.Abstractions.ISimpleConfigModifiers
 Microsoft.TemplateEngine.Abstractions.ITemplate
 Microsoft.TemplateEngine.Abstractions.ITemplate.IsNameAgreementWithFolderPreferred.get -> bool
 Microsoft.TemplateEngine.Abstractions.ITemplateEngineHost
+Microsoft.TemplateEngine.Abstractions.ITemplateEngineHost.BuiltInComponents.get -> System.Collections.Generic.IReadOnlyList<(System.Type! InterfaceType, Microsoft.TemplateEngine.Abstractions.IIdentifiedComponent! Instance)>!
 Microsoft.TemplateEngine.Abstractions.ITemplateEngineHost.Logger.get -> Microsoft.Extensions.Logging.ILogger!
 Microsoft.TemplateEngine.Abstractions.ITemplateEngineHost.LoggerFactory.get -> Microsoft.Extensions.Logging.ILoggerFactory!
 Microsoft.TemplateEngine.Abstractions.ITemplateInfo
@@ -229,10 +231,10 @@ Microsoft.TemplateEngine.Abstractions.TemplateParameterPriority.Suggested = 1 ->
 ~Microsoft.TemplateEngine.Abstractions.IAllowDefaultIfOptionWithoutValue.DefaultIfOptionWithoutValue.set -> void
 ~Microsoft.TemplateEngine.Abstractions.IBaselineInfo.DefaultOverrides.get -> System.Collections.Generic.IReadOnlyDictionary<string, string>
 ~Microsoft.TemplateEngine.Abstractions.IBaselineInfo.Description.get -> string
-~Microsoft.TemplateEngine.Abstractions.IComponentManager.OfType<T>() -> System.Collections.Generic.IEnumerable<T>
-~Microsoft.TemplateEngine.Abstractions.IComponentManager.Register(System.Type type) -> void
-~Microsoft.TemplateEngine.Abstractions.IComponentManager.RegisterMany(System.Collections.Generic.IEnumerable<System.Type> typeList) -> void
-~Microsoft.TemplateEngine.Abstractions.IComponentManager.TryGetComponent<T>(System.Guid id, out T component) -> bool
+Microsoft.TemplateEngine.Abstractions.IComponentManager.OfType<T>() -> System.Collections.Generic.IEnumerable<T!>!
+Microsoft.TemplateEngine.Abstractions.IComponentManager.Register(System.Type! type) -> void
+Microsoft.TemplateEngine.Abstractions.IComponentManager.RegisterMany(System.Collections.Generic.IEnumerable<System.Type!>! typeList) -> void
+Microsoft.TemplateEngine.Abstractions.IComponentManager.TryGetComponent<T>(System.Guid id, out T? component) -> bool
 ~Microsoft.TemplateEngine.Abstractions.ICreationEffects.CreationResult.get -> Microsoft.TemplateEngine.Abstractions.ICreationResult
 ~Microsoft.TemplateEngine.Abstractions.ICreationEffects.FileChanges.get -> System.Collections.Generic.IReadOnlyList<Microsoft.TemplateEngine.Abstractions.IFileChange>
 ~Microsoft.TemplateEngine.Abstractions.ICreationEffects2.CreationResult.get -> Microsoft.TemplateEngine.Abstractions.ICreationResult
@@ -306,7 +308,6 @@ Microsoft.TemplateEngine.Abstractions.IPathInfo.UserProfileDir.get -> string!
 ~Microsoft.TemplateEngine.Abstractions.ITemplate.Generator.get -> Microsoft.TemplateEngine.Abstractions.IGenerator
 ~Microsoft.TemplateEngine.Abstractions.ITemplate.LocaleConfiguration.get -> Microsoft.TemplateEngine.Abstractions.Mount.IFileSystemInfo
 ~Microsoft.TemplateEngine.Abstractions.ITemplate.TemplateSourceRoot.get -> Microsoft.TemplateEngine.Abstractions.Mount.IDirectory
-Microsoft.TemplateEngine.Abstractions.ITemplateEngineHost.BuiltInComponents.get -> System.Collections.Generic.IReadOnlyList<System.Collections.Generic.KeyValuePair<System.Guid, System.Func<System.Type!>!>>!
 Microsoft.TemplateEngine.Abstractions.ITemplateEngineHost.FallbackHostTemplateConfigNames.get -> System.Collections.Generic.IReadOnlyList<string!>!
 Microsoft.TemplateEngine.Abstractions.ITemplateEngineHost.FileSystem.get -> Microsoft.TemplateEngine.Abstractions.PhysicalFileSystem.IPhysicalFileSystem!
 Microsoft.TemplateEngine.Abstractions.ITemplateEngineHost.HostIdentifier.get -> string!

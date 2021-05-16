@@ -5,19 +5,12 @@ using System.Linq;
 using Microsoft.TemplateEngine.TestHelper;
 using Xunit;
 
-namespace Microsoft.TemplateEngine.Edge.UnitTests
+namespace Microsoft.TemplateEngine.Orchestrator.RunnableProjects.UnitTests
 {
-    public class ComponentManagerTests : IClassFixture<EnvironmentSettingsHelper>
+    public class AllComponents
     {
-        private EnvironmentSettingsHelper _environmentSettingsHelper;
-
-        public ComponentManagerTests(EnvironmentSettingsHelper environmentSettingsHelper)
-        {
-            _environmentSettingsHelper = environmentSettingsHelper;
-        }
-
         [Fact]
-        public void TestAllEdgeComponentsAdded()
+        public void TestAllComponents()
         {
             var assemblyCatalog = new AssemblyComponentCatalog(new[] { typeof(Components).Assembly });
 
